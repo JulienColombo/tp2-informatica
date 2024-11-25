@@ -34,23 +34,54 @@ main {
     color: white; /* Texto en blanco para mejor visibilidad */
 }
 
-.swiper {
-    width: 1000px;
-    height: 500px;
-  }
+/* Centrar la galería en la página */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
 
+/* Configuración del slider */
+.swiper {
+  width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+  max-width: 1200px;
+  height: 500px; /* Altura inicial para pantallas grandes */
+}
 
 .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-del-nota {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene proporciones */
+  border-radius: 10px; /* Esquinas redondeadas opcionales */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .swiper {
+    height: 100vh; /* Incrementa la altura en móviles */
   }
-  
+
   .foto-del-nota {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
+
+    object-fit: contain; /* Muestra toda la imagen sin recorte */
   }
+}
+
+@media (max-width: 768px) {
+  .instagram-media {
+      width: 100% !important;
+      max-width: 100% !important;
+  }
+}
+
 
   .container-form {
     max-width: 500px;
@@ -61,3 +92,8 @@ main {
     background-color: #f8f9fa; /* Fondo claro */
     border-radius: 8px;
   }
+   h1, h2, a, p, h3 {
+    font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+   }
